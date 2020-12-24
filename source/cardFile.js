@@ -111,7 +111,7 @@ export default class CardFile {
         res.arrow2_1 = path + "arrow/arrow2_1.png";
       }
 
-      res.attribute = `${path}/attribute/${data.lang}/${data.attribute}.png`;;
+      res.attribute = `${path}/attribute/${data.lang}/${data.attribute}.png`;
       if (data.type2 === "cl") {
         res.level = path + "star/rank.png";
       } else {

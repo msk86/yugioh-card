@@ -29,7 +29,7 @@ export class CardFile {
           res.arrow2_1 = path + 'arrow/arrow2_1.png';
         }
 
-        res.attribute = path + 'attribute/' + data.attribute + '.png';
+        res.attribute = `${path}/attribute/${data.lang}/${data.attribute}.png`;
         if (data.type2 === 'cl') {
           res.level = path + 'star/rank.png';
         } else {
@@ -37,7 +37,7 @@ export class CardFile {
         }
     } else {
       res.mold = path + 'frame/' + data.type + '.jpg';
-      res.attribute = path + 'attribute/' + data.type + '.png';
+      res.attribute = `${path}/attribute/${data.lang}/${data.type}.png`;
       if (data.type2 !== 'tc') {
         res.icon = path + 'icon/' + data.type2 + '.png';
       }
@@ -98,6 +98,7 @@ export class Card {
     config = nodeConfig,
     picPath,
     moldPath = './mold/',
+    lang = 'cn',
     cardbagSwitch = false,
     passwordSwitch = true,
     holo = true,
@@ -107,6 +108,7 @@ export class Card {
     this.config = config;
     this.moldPath = moldPath;
     this.picPath = picPath;
+    this.lang = lang;
 
     this.cardbagSwitch = cardbagSwitch;
     this.passwordSwitch = passwordSwitch;
